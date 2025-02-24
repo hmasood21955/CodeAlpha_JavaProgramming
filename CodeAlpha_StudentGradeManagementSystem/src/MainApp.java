@@ -25,3 +25,13 @@ class Student {
         sum += grades.get(i);
         return sum / grades.size();
     }
+
+    public double findHighestGrade() {
+        if (grades.isEmpty()) return 0.0;
+        double highest = grades.get(0);
+        for (int i = 1; i < grades.size(); i++) {
+            if (grades.get(i) > highest) 
+            highest = grades.get(i);
+        }
+        return highest;
+    }
