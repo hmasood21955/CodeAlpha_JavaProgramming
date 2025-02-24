@@ -46,3 +46,12 @@ class Student {
         return lowest;
     }
 
+    public void displayStudentDetails() {
+        System.out.println("\nStudent Name: " + name);
+        System.out.println("Grades: " + grades);
+        System.out.println("Average Grade: " + calculateAverage());
+        System.out.println("Highest Grade: " + findHighestGrade());
+        System.out.println("Lowest Grade: " + findLowestGrade());
+    }
+}
+
