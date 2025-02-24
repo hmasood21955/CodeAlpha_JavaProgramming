@@ -35,3 +35,14 @@ class Student {
         }
         return highest;
     }
+
+    public double findLowestGrade() {
+        if (grades.isEmpty()) return 0.0;
+        double lowest = grades.get(0);
+        for (int i = 1; i < grades.size(); i++) {
+            if (grades.get(i) < lowest) 
+            lowest = grades.get(i);
+        }
+        return lowest;
+    }
+
