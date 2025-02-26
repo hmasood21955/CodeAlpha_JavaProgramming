@@ -108,3 +108,23 @@ class StudentManager {
             int choice = scanner.nextInt();
             scanner.nextLine();
 
+            switch (choice) {
+                case 1:
+                    addStudent();
+                    break;
+                case 2:
+                    addGrade();
+                    break;
+                case 3:
+                    gradeTracker.displayAllStudents();
+                    break;
+                case 4:
+                    System.out.println("Exiting the program. Goodbye!");
+                    scanner.close();
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+        }
+    }
+
