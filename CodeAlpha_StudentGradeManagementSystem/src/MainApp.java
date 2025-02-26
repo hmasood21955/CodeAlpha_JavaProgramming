@@ -150,3 +150,10 @@ class StudentManager {
     }
 }
 
+// Main class to run the application
+public class MainApp {
+    public static void main(String[] args) {
+        StudentManager manager = new StudentManager();
+        manager.run();
+    }
+}
