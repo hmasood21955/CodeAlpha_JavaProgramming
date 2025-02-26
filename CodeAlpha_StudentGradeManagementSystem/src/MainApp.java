@@ -66,3 +66,12 @@ class GradeTracker {
     public void addStudent(Student student) {
         students.add(student);
     }
+
+    public Student findStudent(String name) {
+        for (int i = 0; i < students.size(); i++) {
+            if (students.get(i).getName().equalsIgnoreCase(name)) {
+                return students.get(i);
+            }
+        }
+        return null;
+    }
