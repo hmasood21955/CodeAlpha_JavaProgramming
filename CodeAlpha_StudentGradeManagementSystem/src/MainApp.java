@@ -128,3 +128,10 @@ class StudentManager {
         }
     }
 
+    private void addStudent() {
+        System.out.print("Enter student name: ");
+        String name = scanner.nextLine();
+        gradeTracker.addStudent(new Student(name));
+        System.out.println("Student added successfully!");
+    }
+
