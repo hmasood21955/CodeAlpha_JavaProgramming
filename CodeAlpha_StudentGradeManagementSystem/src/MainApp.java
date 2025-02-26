@@ -75,3 +75,14 @@ class GradeTracker {
         }
         return null;
     }
+
+    public void displayAllStudents() {
+        if (students.isEmpty()) {
+            System.out.println("No students found!");
+            return;
+        }
+        for (int i = 0; i < students.size(); i++) {
+            students.get(i).displayStudentDetails();
+        }
+    }
+}
