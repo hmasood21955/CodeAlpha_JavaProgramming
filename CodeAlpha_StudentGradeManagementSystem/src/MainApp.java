@@ -135,3 +135,18 @@ class StudentManager {
         System.out.println("Student added successfully!");
     }
 
+    private void addGrade() {
+        System.out.print("Enter student name: ");
+        String studentName = scanner.nextLine();
+        Student student = gradeTracker.findStudent(studentName);
+        if (student != null) {
+            System.out.print("Enter grade: ");
+            double grade = scanner.nextDouble();
+            student.addGrade(grade);
+            System.out.println("Grade added successfully!");
+        } else {
+            System.out.println("Student not found!");
+        }
+    }
+}
+
