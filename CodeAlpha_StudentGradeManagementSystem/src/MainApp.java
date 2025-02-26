@@ -86,3 +86,13 @@ class GradeTracker {
         }
     }
 }
+
+// Class to handle user interaction
+class StudentManager {
+    private Scanner scanner;
+    private GradeTracker gradeTracker;
+
+    public StudentManager() {
+        scanner = new Scanner(System.in);
+        gradeTracker = new GradeTracker();
+    }
