@@ -96,3 +96,15 @@ class StudentManager {
         scanner = new Scanner(System.in);
         gradeTracker = new GradeTracker();
     }
+
+    public void run() {
+        System.out.println("Welcome to the Student Grade Tracker!");
+        while (true) {
+            System.out.println("\n1. Add a Student");
+            System.out.println("2. Add Grades for a Student");
+            System.out.println("3. View All Students' Details");
+            System.out.println("4. Exit");
+            System.out.print("Choose an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
