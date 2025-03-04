@@ -115,3 +115,33 @@ public class HotelReservationSystem {
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
 
+            switch (choice) {
+                case 1:
+                    hotel.searchAvailableRooms();
+                    break;
+
+                case 2:
+                    System.out.print("Enter your name: ");
+                    String guestName = scanner.nextLine();
+                    System.out.print("Enter room number: ");
+                    int roomNumber = scanner.nextInt();
+                    System.out.print("Enter number of nights: ");
+                    int nights = scanner.nextInt();
+                    hotel.makeReservation(guestName, roomNumber, nights);
+                    break;
+
+                case 3:
+                    hotel.viewReservations();
+                    break;
+
+                case 4:
+                    System.out.println("Thank you for using the Hotel Reservation System. Goodbye!");
+                    scanner.close();
+                    return;
+
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
+        }
+    }
+}
