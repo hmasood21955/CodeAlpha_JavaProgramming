@@ -30,3 +30,17 @@ class Reservation {
         room.isBooked = true; // Mark the room as booked
     }
 }
+
+// Hotel class to manage rooms and reservations
+class Hotel {
+    String name;
+    Room[] rooms;
+    Reservation[] reservations;
+    int reservationCount;
+
+    public Hotel(String name, int numberOfRooms) {
+        this.name = name;
+        this.rooms = new Room[numberOfRooms];
+        this.reservations = new Reservation[100]; // Max 100 reservations
+        this.reservationCount = 0;
+    }
