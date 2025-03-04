@@ -75,3 +75,20 @@ class Hotel {
         }
         System.out.println("Room not available or invalid room number.");
     }
+
+    // View all reservations
+    public void viewReservations() {
+        if (reservationCount == 0) {
+            System.out.println("No reservations found.");
+        } else {
+            System.out.println("Current Reservations:");
+            for (int i = 0; i < reservationCount; i++) {
+                System.out.println("Guest: " + reservations[i].guestName +
+                        ", Room: " + reservations[i].room.roomNumber +
+                        ", Nights: " + reservations[i].nights +
+                        ", Total Cost: $" + reservations[i].totalCost);
+            }
+        }
+    }
+}
+
