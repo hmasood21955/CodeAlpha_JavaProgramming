@@ -44,3 +44,8 @@ class Hotel {
         this.reservations = new Reservation[100]; // Max 100 reservations
         this.reservationCount = 0;
     }
+
+    // Add a room to the hotel
+    public void addRoom(int index, int roomNumber, String category, double price) {
+        rooms[index] = new Room(roomNumber, category, price);
+    }
