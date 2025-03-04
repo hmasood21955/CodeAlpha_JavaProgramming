@@ -92,3 +92,15 @@ class Hotel {
     }
 }
 
+// Main class to run the hotel reservation system
+public class HotelReservationSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Hotel hotel = new Hotel("Sunset Paradise", 5); // Hotel with 5 rooms
+
+        // Add rooms to the hotel
+        hotel.addRoom(0, 101, "Standard", 100.0);
+        hotel.addRoom(1, 102, "Standard", 100.0);
+        hotel.addRoom(2, 201, "Deluxe", 150.0);
+        hotel.addRoom(3, 202, "Deluxe", 150.0);
+        hotel.addRoom(4, 301, "Suite", 250.0);
