@@ -104,3 +104,14 @@ public class HotelReservationSystem {
         hotel.addRoom(2, 201, "Deluxe", 150.0);
         hotel.addRoom(3, 202, "Deluxe", 150.0);
         hotel.addRoom(4, 301, "Suite", 250.0);
+
+        while (true) {
+            System.out.println("\nWelcome to " + hotel.name + "!");
+            System.out.println("1. Search Available Rooms");
+            System.out.println("2. Make a Reservation");
+            System.out.println("3. View Reservations");
+            System.out.println("4. Exit");
+            System.out.print("Choose an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
+
