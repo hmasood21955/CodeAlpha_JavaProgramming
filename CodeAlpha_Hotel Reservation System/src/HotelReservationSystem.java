@@ -59,3 +59,19 @@ class Hotel {
             }
         }
     }
+
+    // Make a reservation
+    public void makeReservation(String guestName, int roomNumber, int nights) {
+        for (int i = 0; i < rooms.length; i++) {
+            if (rooms[i] != null && rooms[i].roomNumber == roomNumber && !rooms[i].isBooked) {
+                reservations[reservationCount] = new Reservation(guestName, rooms[i], nights);
+                reservationCount++;
+                System.out.println("Reservation successful!");
+                System.out.println("Guest: " + guestName);
+                System.out.println("Room: " + rooms[i].roomNumber + " (" + rooms[i].category + ")");
+                System.out.println("Total Cost: $" + (rooms[i].price * nights));
+                return;
+            }
+        }
+        System.out.println("Room not available or invalid room number.");
+    }
