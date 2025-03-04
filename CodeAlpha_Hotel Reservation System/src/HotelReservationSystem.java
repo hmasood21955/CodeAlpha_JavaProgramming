@@ -49,3 +49,13 @@ class Hotel {
     public void addRoom(int index, int roomNumber, String category, double price) {
         rooms[index] = new Room(roomNumber, category, price);
     }
+
+    // Search for available rooms
+    public void searchAvailableRooms() {
+        System.out.println("Available Rooms:");
+        for (int i = 0; i < rooms.length; i++) {
+            if (rooms[i] != null && !rooms[i].isBooked) {
+                System.out.println("Room " + rooms[i].roomNumber + " (" + rooms[i].category + ") - $" + rooms[i].price + " per night");
+            }
+        }
+    }
