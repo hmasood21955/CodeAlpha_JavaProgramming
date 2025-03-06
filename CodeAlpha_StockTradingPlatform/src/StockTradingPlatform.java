@@ -83,3 +83,9 @@ class Portfolio {
         System.out.println("Balance: $" + balance);
     }
 }
+
+public class StockTradingPlatform {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        StockMarket market = new StockMarket();
+        Portfolio portfolio = new Portfolio();
