@@ -70,3 +70,16 @@ class Portfolio {
         }
         showPortfolio();
     }
+    
+    public void showPortfolio() {
+        System.out.println("Portfolio:");
+        if (holdings.isEmpty()) {
+            System.out.println("No stocks owned.");
+        } else {
+            for (Map.Entry<String, Integer> entry : holdings.entrySet()) {
+                System.out.println(entry.getKey() + " : " + entry.getValue() + " shares");
+            }
+        }
+        System.out.println("Balance: $" + balance);
+    }
+}
