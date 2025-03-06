@@ -99,3 +99,39 @@ public class StockTradingPlatform {
                 System.out.println("5. Exit");
                 System.out.print("Choose an option: ");
                 int choice = scanner.nextInt();
+                
+                switch (choice) {
+                    case 1:
+                        market.showMarketData();
+                        break;
+                    case 2:
+                        System.out.print("Enter stock symbol: ");
+                        String buySymbol = scanner.next().toUpperCase();
+                        System.out.print("Enter quantity: ");
+                        int buyQuantity = scanner.nextInt();
+                        portfolio.buyStock(buySymbol, buyQuantity, market.getPrice(buySymbol));
+                        break;
+                    case 3:
+                        System.out.print("Enter stock symbol: ");
+                        String sellSymbol = scanner.next().toUpperCase();
+                        System.out.print("Enter quantity: ");
+                        int sellQuantity = scanner.nextInt();
+                        portfolio.sellStock(sellSymbol, sellQuantity, market.getPrice(sellSymbol));
+                        break;
+                    case 4:
+                        portfolio.showPortfolio();
+                        break;
+                    case 5:
+                        System.out.println("Exiting...");
+                        scanner.close();
+                        return;
+                    default:
+                        System.out.println("Invalid choice. Try again.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+                scanner.next(); 
+            }
+        }
+    }
+}
