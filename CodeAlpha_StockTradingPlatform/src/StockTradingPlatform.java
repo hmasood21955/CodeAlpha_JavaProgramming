@@ -49,3 +49,24 @@ class Portfolio {
         }
         showPortfolio();
     }
+    
+    public void sellStock(String symbol, int quantity, double price) {
+        if (price == 0.0) {
+            System.out.println("Invalid stock symbol.");
+            return;
+        }
+        if (quantity <= 0) {
+            System.out.println("Quantity must be greater than zero.");
+            return;
+        }
+        
+        int availableShares = holdings.getOrDefault(symbol, 0);
+        if (availableShares >= quantity) {
+            holdings.put(symbol, availableShares - quantity);
+            balance += quantity * price;
+            System.out.println("Sold " + quantity + " shares of " + symbol);
+        } else {
+            System.out.println("Not enough shares to sell.");
+        }
+        showPortfolio();
+    }
