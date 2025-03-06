@@ -89,3 +89,13 @@ public class StockTradingPlatform {
         Scanner scanner = new Scanner(System.in);
         StockMarket market = new StockMarket();
         Portfolio portfolio = new Portfolio();
+        
+        while (true) {
+            try {
+                System.out.println("\n1. View Market Data");
+                System.out.println("2. Buy Stock");
+                System.out.println("3. Sell Stock");
+                System.out.println("4. View Portfolio");
+                System.out.println("5. Exit");
+                System.out.print("Choose an option: ");
+                int choice = scanner.nextInt();
