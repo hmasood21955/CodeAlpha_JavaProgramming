@@ -20,3 +20,8 @@ class StockMarket {
         }
     }
 }
+
+class Portfolio {
+    private final Map<String, Integer> holdings = new HashMap<>();
+    private double balance = 10000.0;
+    
